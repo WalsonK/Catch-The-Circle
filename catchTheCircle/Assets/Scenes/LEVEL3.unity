@@ -14,9 +14,9 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 1
+  m_Fog: 0
   m_FogColor: {r: 0.79215693, g: 0.79215693, b: 0.79215693, a: 1}
-  m_FogMode: 2
+  m_FogMode: 1
   m_FogDensity: 0.03
   m_LinearFogStart: 0
   m_LinearFogEnd: 10
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.45139313, g: 0.50047255, b: 0.5701123, a: 1}
+  m_IndirectSpecularColor: {r: 0.45139265, g: 0.5004716, b: 0.57011163, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1743,12 +1743,12 @@ MonoBehaviour:
   - {fileID: 7897948168657913917, guid: 4187900a58ea9a64aa22e6833da884b6, type: 3}
   - {fileID: 3143612175774482768, guid: 80904221bd2376b48b16f8fbff43a704, type: 3}
   - {fileID: 5078957553323565726, guid: 4c4e1e419bcb7b646b1df7363f3a3268, type: 3}
-  Colors:
-  - {fileID: 2100000, guid: e3a67dae31e098a478a945791efe537a, type: 2}
-  - {fileID: 2100000, guid: bedefa8c7817f104c8a056c9231fa70c, type: 2}
-  timeBetweenWave: 1.5
+  shaders:
+  - {fileID: 2100000, guid: dc8cf8184478d3b47b5f1126b215b0c4, type: 2}
+  - {fileID: 2100000, guid: 78b745fb0baec4c488a72ef085781a82, type: 2}
+  - {fileID: 2100000, guid: e1915f04e66126449879fc72b0a0bec0, type: 2}
   forwardForce: 25
-  MaxWave: 10
+  MaxWave: 17
 --- !u!4 &1679581234
 Transform:
   m_ObjectHideFlags: 0

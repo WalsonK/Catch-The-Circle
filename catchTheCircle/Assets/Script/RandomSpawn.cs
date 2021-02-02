@@ -8,14 +8,14 @@ public class RandomSpawn : MonoBehaviour
     public GameObject spawner;
 
     public GameObject[] Shapes;
-    public Material[] Colors;
+    public Material[] shaders;
     private GameObject newObject;
 
     private int SpawnCount = 0;
     public float forwardForce = 500f;
     public int MaxWave = 10;
 
-
+    // Start is called before the first frame update
     void Start()
     {
         while (SpawnCount < MaxWave)
@@ -25,7 +25,6 @@ public class RandomSpawn : MonoBehaviour
             SpawnCount++;
         }
     }
-    // Start is called before the first frame update
 
     void Spawner()
     {
@@ -35,7 +34,7 @@ public class RandomSpawn : MonoBehaviour
             if(i != randomVoid)
                 {
                 newObject = Instantiate(Shapes[Random.Range(0, Shapes.Length)], new Vector3(spawnPoints[i].position.x + Random.Range(-1,1), spawnPoints[i].position.y, spawnPoints[i].position.z), spawnPoints[i].rotation);
-                newObject.GetComponent<Renderer>().material = Colors[Random.Range(0, Colors.Length)];
+                newObject.GetComponent<Renderer>().material = shaders[Random.Range(0, shaders.Length)];
             }
            
         }
