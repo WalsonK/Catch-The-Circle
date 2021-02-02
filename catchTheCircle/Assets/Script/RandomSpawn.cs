@@ -12,38 +12,32 @@ public class RandomSpawn : MonoBehaviour
     private GameObject newObject;
 
     private int SpawnCount = 0;
-    private float timeToSpawn = 2f;
-    public float timeBetweenWave = 1f;
-
     public float forwardForce = 500f;
     public int MaxWave = 10;
 
 
-    void Update()
+    void Start()
     {
-     
-         if (Time.time >= timeToSpawn && SpawnCount < MaxWave)
+        while (SpawnCount < MaxWave)
         {
             Spawner();
-            timeToSpawn = Time.time + timeBetweenWave;
+            spawner.transform.position = new Vector3(spawner.transform.position.x, spawner.transform.position.y, spawner.transform.position.z + forwardForce);
             SpawnCount++;
         }
-            
-  
-    }
-
-    void FixedUpdate()
-    {
-        spawner.transform.position = new Vector3(spawner.transform.position.x, spawner.transform.position.y, spawner.transform.position.z + forwardForce * Time.deltaTime);  
     }
     // Start is called before the first frame update
 
     void Spawner()
     {
+        int randomVoid = Random.Range(0, spawnPoints.Length);
         for (int i = 0; i < spawnPoints.Length; i++)
         {
-            newObject = Instantiate(Shapes[Random.Range(0, Shapes.Length)], spawnPoints[i].position, spawnPoints[i].rotation);
-            newObject.GetComponent<Renderer>().material = Colors[Random.Range(0, Colors.Length)];
+            if(i != randomVoid)
+                {
+                newObject = Instantiate(Shapes[Random.Range(0, Shapes.Length)], new Vector3(spawnPoints[i].position.x + Random.Range(-1,1), spawnPoints[i].position.y, spawnPoints[i].position.z), spawnPoints[i].rotation);
+                newObject.GetComponent<Renderer>().material = Colors[Random.Range(0, Colors.Length)];
+            }
+           
         }
 
     }
