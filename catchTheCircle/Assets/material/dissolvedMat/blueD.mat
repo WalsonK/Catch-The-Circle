@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: circle
-  m_Shader: {fileID: -6465566751694194690, guid: 40e0f63b39717cb4dbb2bd6453c2c604,
+  m_Name: blueD
+  m_Shader: {fileID: -6465566751694194690, guid: df2ca72f470e986449faf02b6754d62c,
     type: 3}
   m_ShaderKeywords: _EMISSION _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
   m_LightmapFlags: 2
@@ -75,5 +75,7 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
+    - Color_84191846: {r: 0.972549, g: 0.7411765, b: 0.26666668, a: 0}
+    - Color_CC56D380: {r: 0.3372549, g: 0, b: 0.9647059, a: 0}
     - _Color: {r: 0.3372549, g: 0, b: 0.9647059, a: 1}
     - _EmissionColor: {r: 0.20507877, g: 0.025186857, b: 0.9559735, a: 1}
