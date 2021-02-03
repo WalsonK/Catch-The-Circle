@@ -6,14 +6,14 @@ public class playerCollision : MonoBehaviour
     public playerMovement movement;
 
     float value;
+    public string objectifTag = "";
 
     void OnCollisionEnter(Collision collisionInfo)
     {
-        
-        if(collisionInfo.collider.tag == "circle")
+        if(collisionInfo.collider.tag == objectifTag)
         {
             
-            Debug.Log("We hit the circle !");
+            Debug.Log("We hit the objectif !");
             // Augmenter le score de 1 !
             FindObjectOfType<GameManager>().actualScore += 1f;
             FindObjectOfType<AudioManager>().Play("Dissolution");

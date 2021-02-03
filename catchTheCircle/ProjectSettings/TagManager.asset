@@ -6,6 +6,8 @@ TagManager:
   tags:
   - circle
   - obstacle
+  - cube
+  - triangle
   layers:
   - Default
   - TransparentFX
