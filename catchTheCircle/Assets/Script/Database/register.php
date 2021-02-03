@@ -8,11 +8,11 @@
         exit();
     }
 
-    $firstname = $_POST["fistname"];
+    $firstname = $_POST["firstname"];
     $lastname = $_POST["lastname"];
 
     //check name exists
-    $namecheckquery = "SELECT firstname_user, lastname_user FROM user WHERE firstname_user ='" . $firsname . "'";
+    $namecheckquery = "SELECT firstname_user, lastname_user FROM user WHERE firstname_user ='" . $firstname . "'";
 
     $namecheck = mysqli_query($con, $namecheckquery) or die("2: Name check query failed"); 
 

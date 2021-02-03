@@ -13,7 +13,7 @@ public class Registration : MonoBehaviour
 
     public Button submitButton;
 
-    string url = "http://localhost/sqlconnect/register.php";
+    string url = "http://localhost/dbconnect/register.php";
 
     public void CallRegister()
     {
@@ -45,8 +45,6 @@ public class Registration : MonoBehaviour
         }
 
     }
-
-
     public void VerifyInputs()
     {
         submitButton.interactable = (firstnamefield.text.Length >= 10 && lastnamefield.text.Length >= 20 );
