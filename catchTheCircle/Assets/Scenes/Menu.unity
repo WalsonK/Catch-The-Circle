@@ -3693,7 +3693,7 @@ GameObject:
   - component: {fileID: 736557899}
   - component: {fileID: 736557898}
   m_Layer: 5
-  m_Name: InputNom
+  m_Name: InputFName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3762,13 +3762,13 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 736557899}
   m_TextComponent: {fileID: 1373837944}
   m_Placeholder: {fileID: 479348092}
-  m_ContentType: 6
+  m_ContentType: 5
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 7
+  m_KeyboardType: 6
   m_LineType: 0
   m_HideMobileInput: 0
-  m_CharacterValidation: 5
+  m_CharacterValidation: 4
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
@@ -4952,7 +4952,7 @@ GameObject:
   - component: {fileID: 872589714}
   - component: {fileID: 872589713}
   m_Layer: 5
-  m_Name: InputPren
+  m_Name: InputLName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5021,13 +5021,13 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 872589714}
   m_TextComponent: {fileID: 59156465}
   m_Placeholder: {fileID: 1672312403}
-  m_ContentType: 7
-  m_InputType: 2
+  m_ContentType: 5
+  m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 0
+  m_KeyboardType: 6
   m_LineType: 0
   m_HideMobileInput: 0
-  m_CharacterValidation: 0
+  m_CharacterValidation: 4
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
@@ -7882,7 +7882,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1432614877
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9275,7 +9275,7 @@ GameObject:
   - component: {fileID: 1793208662}
   - component: {fileID: 1793208661}
   m_Layer: 5
-  m_Name: Button
+  m_Name: PlayButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9353,10 +9353,10 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1432614878}
-        m_MethodName: PlayGame
+      - m_Target: {fileID: 1981012293}
+        m_MethodName: CallRegister
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10458,13 +10458,14 @@ GameObject:
   - component: {fileID: 1981012290}
   - component: {fileID: 1981012292}
   - component: {fileID: 1981012291}
+  - component: {fileID: 1981012293}
   m_Layer: 5
   m_Name: PlayerMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1981012290
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10515,6 +10516,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e8db1e7427cc5842a7c2d933ed08f95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1981012293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1981012289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8df73cd12a7ba2d4ba3caf0f0d360314, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firstnamefield: {fileID: 736557898}
+  lastnamefield: {fileID: 872589713}
+  submitButton: {fileID: 1793208661}
 --- !u!1 &1994740729
 GameObject:
   m_ObjectHideFlags: 0

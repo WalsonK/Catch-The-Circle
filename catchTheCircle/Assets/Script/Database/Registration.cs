@@ -26,7 +26,7 @@ public class Registration : MonoBehaviour
 
         WWWForm form = new WWWForm();
         form.AddField("firstname", firstnamefield.text.ToString());
-        form.AddField("lasttname", lastnamefield.text.ToString());
+        form.AddField("lastname", lastnamefield.text.ToString());
 
         Debug.Log(firstnamefield.text.ToString() + "ok");
 
