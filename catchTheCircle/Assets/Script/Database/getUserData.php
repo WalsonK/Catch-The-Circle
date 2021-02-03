@@ -2,13 +2,10 @@
 	if(isset($_POST["email"]) && isset($_POST["password1"]) && isset($_POST["password2"])){
 		$errors = array();
 		
-		$nameMaxLength = 50;
 		$emailMaxLength = 254;
 		$passwordMaxLength = 19;
 		$passwordMinLength = 5;
 		
-		$firstname = $_POST["firstname"];
-		$lastname = $_POST["lastname"];
 		$email = strtolower($_POST["email"]);
 		$password1 = $_POST["password1"];
 		$password2 = $_POST["password2"];
@@ -26,27 +23,18 @@
 			}
 		}
 		
-		//Validate username
-		if(strlen($username) > $usernameMaxLength || strlen($username) < $usernameMinLength){
-			$errors[] = "Incorrect username length, must be between " . strval($usernameMinLength) . " and " . strval($usernameMaxLength) . " characters";
-		}else{
-			if(!ctype_alnum ($username)){
-				$errors[] = "Username must be alphanumeric";
-			}
-		}
-		
 		//Validate password
 		if($password1 != $password2){
-			$errors[] = "Passwords do not match";
+			$errors[] = "Les mots de passe ne correspondent pas";
 		}else{
 			if(preg_match('/\s/', $password1)){
-				$errors[] = "Password can't have spaces";
+				$errors[] = "Les mots de passe ne doivent pas contenir d'espace";
 			}else{
 				if(strlen($password1) > $passwordMaxLength || strlen($password1) < $passwordMinLength){
-					$errors[] = "Incorrect password length, must be between " . strval($passwordMinLength) . " and " . strval($passwordMaxLength) . " characters";
+					$errors[] = "Mot de passe trop long, il doit être entre " . strval($passwordMinLength) . " et " . strval($passwordMaxLength) . " caractères";
 				}else{
 					if(!preg_match('/[A-Za-z]/', $password1) || !preg_match('/[0-9]/', $password1)){
-						$errors[] = "Password must contain atleast 1 letter and 1 number";
+						$errors[] = "Le mot de passe doit contenir au moins 1 chiffre ";
 					}
 				}
 			}
@@ -57,10 +45,10 @@
 			//Connect to database
 			require dirname(__FILE__) . '/database.php';
 			
-			if ($stmt = $mysqli_conection->prepare("SELECT username, email FROM sc_users WHERE email = ? OR username = ? LIMIT 1")) {
+			if ($stmt = $mysqli_conection->prepare("SELECT mail_manager FROM manager WHERE mail_manager = ? LIMIT 1")) {
 				
 				/* bind parameters for markers */
-				$stmt->bind_param('ss', $email, $username);
+				$stmt->bind_param('ss', $email);
 					
 				/* execute query */
 				if($stmt->execute()){
@@ -71,16 +59,13 @@
 					if($stmt->num_rows > 0){
 					
 						/* bind result variables */
-						$stmt->bind_result($username_tmp, $email_tmp);
+						$stmt->bind_result($email_tmp);
 
 						/* fetch value */
 						$stmt->fetch();
 						
 						if($email_tmp == $email){
-							$errors[] = "User with this email already exist.";
-						}
-						else if($username_tmp == $username){
-							$errors[] = "User with this name already exist.";
+							$errors[] = "Cette email est déjà utilisé.";
 						}
 					}
 					
@@ -88,20 +73,20 @@
 					$stmt->close();
 					
 				}else{
-					$errors[] = "Something went wrong, please try again.";
+					$errors[] = "Une erreur à eut lieu, veuillez réessayer.";
 				}
 			}else{
-				$errors[] = "Something went wrong, please try again.";
+				$errors[] = "Une erreur à eut lieu, veuillez réessayer.";
 			}
 		}
 		
 		//Finalize registration
 		if(count($errors) == 0){
 			$hashedPassword = password_hash($password1, PASSWORD_BCRYPT);
-			if ($stmt = $mysqli_conection->prepare("INSERT INTO sc_users (username, email, password) VALUES(?, ?, ?)")) {
+			if ($stmt = $mysqli_conection->prepare("INSERT INTO manager (mail_manager, password_manager) VALUES( ?, ?)")) {
 				
 				/* bind parameters for markers */
-				$stmt->bind_param('sss', $username, $email, $hashedPassword);
+				$stmt->bind_param('sss', $hashedPassword);
 					
 				/* execute query */
 				if($stmt->execute()){
@@ -110,10 +95,10 @@
 					$stmt->close();
 					
 				}else{
-					$errors[] = "Something went wrong, please try again.";
+					$errors[] = "Une erreur à eut lieu, veuillez réessayer.";
 				}
 			}else{
-				$errors[] = "Something went wrong, please try again.";
+				$errors[] = "Une erreur à eut lieu, veuillez réessayer.";
 			}
 		}
 		

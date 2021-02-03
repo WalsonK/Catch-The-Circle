@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -3424,8 +3424,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 935312627}
-        m_MethodName: PlayGame
+      - m_Target: {fileID: 935312628}
+        m_MethodName: CallRegister
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5055,8 +5055,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8df73cd12a7ba2d4ba3caf0f0d360314, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  namefield: {fileID: 0}
-  passwordField: {fileID: 0}
+  firstnamefield: {fileID: 0}
+  lastnamefield: {fileID: 0}
   submitButton: {fileID: 0}
 --- !u!1 &956780898
 GameObject:
@@ -5675,7 +5675,7 @@ GameObject:
   - component: {fileID: 1082394358}
   - component: {fileID: 1082394357}
   m_Layer: 5
-  m_Name: Input-prenom
+  m_Name: InputeFirstname
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6111,7 +6111,7 @@ GameObject:
   - component: {fileID: 1122127874}
   - component: {fileID: 1122127873}
   m_Layer: 5
-  m_Name: Input-Nom
+  m_Name: InputLastname
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
