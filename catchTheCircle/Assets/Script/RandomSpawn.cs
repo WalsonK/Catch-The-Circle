@@ -141,8 +141,11 @@ public class RandomSpawn : MonoBehaviour
             {
                 newObject.tag = "cubeB";
             }
-        }
-        
+
+
+        }   
+
+
     }
 
 }

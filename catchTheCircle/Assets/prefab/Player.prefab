@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 621341465681764665}
   - component: {fileID: 621341465681764662}
   m_Layer: 0
-  m_Name: cylindre
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -125,6 +125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movement: {fileID: 621341465681764662}
+  objectifTag: 
 --- !u!114 &621341465681764662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,3 +141,6 @@ MonoBehaviour:
   rb: {fileID: 621341465681764660}
   forwardForce: 350
   axisForce: 30
+  speed: 1
+  sideSensitivity: 100
+  pv: 0
