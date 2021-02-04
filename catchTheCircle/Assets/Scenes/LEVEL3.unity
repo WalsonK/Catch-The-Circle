@@ -1753,6 +1753,8 @@ MonoBehaviour:
   levelCompleteUI: {fileID: 738957242}
   levelObjectifUI: {fileID: 939247187}
   obj: 
+  difficult: 1
+  objCase: 0
 --- !u!4 &1299254294
 Transform:
   m_ObjectHideFlags: 0
