@@ -2677,7 +2677,8 @@ PrefabInstance:
       propertyPath: m_Shadows.m_Type
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1223838165449784321, guid: 3bd194da1266ae3458a6be0fcb1cae8d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3bd194da1266ae3458a6be0fcb1cae8d, type: 3}
 --- !u!1 &3822792874413735808
 GameObject:
