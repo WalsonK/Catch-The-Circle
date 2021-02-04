@@ -12,14 +12,27 @@ public class GameManager : MonoBehaviour
     public GameObject levelObjectifUI;
 
     public string obj;
+    public bool difficult = true;
+    public int objCase;
 
 
 
     private void Start()
     {
-        //Random objectif
-        int objCase = Random.Range(0, 3);
+        difficult = true;
+        if (difficult == true)
+        {
+            //Random objectif difficile
+            objCase = Random.Range(0, 12);
+        }
+        else
+        {
+            //Random objectif facile
+            objCase = Random.Range(0, 3);
+        }
+
         Debug.Log(objCase);
+
         switch (objCase)
         {
             default:
@@ -27,6 +40,7 @@ public class GameManager : MonoBehaviour
                 FindObjectOfType<playerCollision>().objectifTag = "circle";
                 break;
 
+                //Facile
             case 0:
                 obj = "Les Spheres !";
                 FindObjectOfType<playerCollision>().objectifTag = "circle";
@@ -38,6 +52,49 @@ public class GameManager : MonoBehaviour
             case 2:
                 obj = "Les Cubes !";
                 FindObjectOfType<playerCollision>().objectifTag = "cube";
+                break;
+
+            //difficile
+            //Spheres
+            case 3:
+                obj = "Les Spheres Jaune !";
+                FindObjectOfType<playerCollision>().objectifTag = "circleY";
+                break;
+            case 4:
+                obj = "Les Spheres Bleu !";
+                FindObjectOfType<playerCollision>().objectifTag = "circleB";
+                break;
+            case 5:
+                obj = "Les Spheres Violet !";
+                FindObjectOfType<playerCollision>().objectifTag = "circleP";
+                break;
+
+            //Triangles
+            case 6:
+                obj = "Les Triangles Jaune !";
+                FindObjectOfType<playerCollision>().objectifTag = "triangleY";
+                break;
+            case 7:
+                obj = "Les Triangles Bleu !";
+                FindObjectOfType<playerCollision>().objectifTag = "triangleB";
+                break;
+            case 8:
+                obj = "Les Triangles Violet !";
+                FindObjectOfType<playerCollision>().objectifTag = "triangleP";
+                break;
+
+            //Cubes
+            case 9:
+                obj = "Les Cubes Jaune !";
+                FindObjectOfType<playerCollision>().objectifTag = "cubeY";
+                break;
+            case 10:
+                obj = "Les Cubes Bleu !";
+                FindObjectOfType<playerCollision>().objectifTag = "cubeB";
+                break;
+            case 11:
+                obj = "Les Cubes Violet !";
+                FindObjectOfType<playerCollision>().objectifTag = "cubeP";
                 break;
         }
 

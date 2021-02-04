@@ -56,7 +56,7 @@ public class RandomSpawn : MonoBehaviour
                         shader = shaders[2];
                         break;
 
-                    case bool _ when Regex.IsMatch(obj, "violet"):
+                    case bool _ when Regex.IsMatch(obj, "Violet"):
                         shader = shaders[0];
                         break;
 
@@ -96,6 +96,53 @@ public class RandomSpawn : MonoBehaviour
     {
         newObject = Instantiate(Shape, new Vector3(spawnpoint.position.x + Random.Range(-1, 1), spawnpoint.position.y, spawnpoint.position.z), spawnpoint.rotation);
         newObject.GetComponent<Renderer>().material = shader;
+
+        //diffuclt = true donc modifie les tags avec couleurs :
+        if (FindObjectOfType<GameManager>().difficult == true && FindObjectOfType<GameManager>().objCase >= 3)
+        {
+            //Sphere
+            if (Shape.name == "Sphere" && shader.name == "purpleD")
+            {
+                newObject.tag = "circleP";
+            }
+            if (Shape.name == "Sphere" && shader.name == "yellowD")
+            {
+                newObject.tag = "circleY";
+            }
+            if (Shape.name == "Sphere" && shader.name == "blueD")
+            {
+                newObject.tag = "circleB";
+            }
+
+            //triangle
+            if (Shape.name == "triangle" && shader.name == "purpleD")
+            {
+                newObject.tag = "triangleP";
+            }
+            if (Shape.name == "triangle" && shader.name == "yellowD")
+            {
+                newObject.tag = "triangleY";
+            }
+            if (Shape.name == "triangle" && shader.name == "blueD")
+            {
+                newObject.tag = "triangleB";
+            }
+
+            //cube
+            if (Shape.name == "cube1" && shader.name == "purpleD")
+            {
+                newObject.tag = "cubeP";
+            }
+            if (Shape.name == "cube1" && shader.name == "yellowD")
+            {
+                newObject.tag = "cubeY";
+            }
+            if (Shape.name == "cube1" && shader.name == "blueD")
+            {
+                newObject.tag = "cubeB";
+            }
+        }
+        
     }
 
 }
