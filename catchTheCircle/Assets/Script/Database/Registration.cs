@@ -7,30 +7,35 @@ using UnityEngine.UI;
 
 public class Registration : MonoBehaviour
 {
+    public GameObject playermenu;
+    public GameObject dashboard;
 
+    public InputField mailfield;
+    public InputField passwordfield;
     public InputField firstnamefield;
     public InputField lastnamefield;
-
+    
     public Button submitButton;
-
-    string url = "http://localhost/dbconnect/register.php";
 
     public void CallRegister()
     {
-        StartCoroutine(Register());
+        if (playermenu.activeSelf == true)
+        {
+            StartCoroutine(Register());
+        }
+        else
+        {
+            Login();
+        }
     }
 
     IEnumerator Register()
     {
-
-
         WWWForm form = new WWWForm();
         form.AddField("firstname", firstnamefield.text.ToString());
         form.AddField("lastname", lastnamefield.text.ToString());
 
-        Debug.Log(firstnamefield.text.ToString() + "ok");
-
-        using (UnityWebRequest www = UnityWebRequest.Post(url, form))
+        using (UnityWebRequest www = UnityWebRequest.Post("http://localhost/dbconnect/register.php", form))
         {
             yield return www.SendWebRequest();
             if (www.isHttpError == false) // Si il n'y a pas d'erreur alors lance la scène
@@ -47,8 +52,30 @@ public class Registration : MonoBehaviour
     }
     public void VerifyInputs()
     {
-        submitButton.interactable = (firstnamefield.text.Length >= 10 && lastnamefield.text.Length >= 20 );
+        submitButton.interactable = (firstnamefield.text.Length >= 3 && lastnamefield.text.Length >= 5 );
     }
 
+    IEnumerator Login()
+    {
+        WWWForm form = new WWWForm();
+        form.AddField("mail", mailfield.text.ToString());
+        form.AddField("password", passwordfield.text.ToString());
+
+        using (UnityWebRequest www = UnityWebRequest.Post("http://localhost/dbconnect/login.php", form))
+        {
+            yield return www.SendWebRequest();
+            if (www.isHttpError == false) // Si il n'y a pas d'erreur alors lance la scène
+            {
+                gameObject.SetActive(false); // Cache le menu de connexion
+                dashboard.SetActive(true); // Affiche le dashboard
+                Debug.Log("User loged in successfully.");
+            }
+            else // Sinon affiche un message d'erreur
+            {
+                Debug.Log("User login failed . Error #" + www.error);
+            }
+        }
+
+    }
 
 }

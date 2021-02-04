@@ -3163,6 +3163,7 @@ GameObject:
   - component: {fileID: 568234925}
   - component: {fileID: 568234924}
   - component: {fileID: 568234927}
+  - component: {fileID: 568234928}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3266,6 +3267,18 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!114 &568234928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 568234923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bc88fc8733849641af57e34a54adfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &590701513
 GameObject:
   m_ObjectHideFlags: 0
@@ -4813,16 +4826,16 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 590701513}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1477963317}
+        m_MethodName: CallRegister
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &870538398
 MonoBehaviour:
@@ -8062,13 +8075,14 @@ GameObject:
   - component: {fileID: 1477963314}
   - component: {fileID: 1477963315}
   - component: {fileID: 1477963316}
+  - component: {fileID: 1477963317}
   m_Layer: 5
   m_Name: AdminMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1477963314
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8119,6 +8133,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   submitBtn: {fileID: 870538397}
   firstInput: {fileID: 1838512733}
+--- !u!114 &1477963317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1477963313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8df73cd12a7ba2d4ba3caf0f0d360314, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playermenu: {fileID: 1477963313}
+  dashboard: {fileID: 590701513}
+  mailfield: {fileID: 1838512733}
+  passwordfield: {fileID: 422382340}
+  firstnamefield: {fileID: 0}
+  lastnamefield: {fileID: 0}
+  submitButton: {fileID: 870538397}
 --- !u!1 &1536572543
 GameObject:
   m_ObjectHideFlags: 0
@@ -10465,7 +10498,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1981012290
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10528,6 +10561,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8df73cd12a7ba2d4ba3caf0f0d360314, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playermenu: {fileID: 1981012289}
+  dashboard: {fileID: 0}
+  mailfield: {fileID: 0}
+  passwordfield: {fileID: 0}
   firstnamefield: {fileID: 736557898}
   lastnamefield: {fileID: 872589713}
   submitButton: {fileID: 1793208661}
