@@ -6,6 +6,17 @@ TagManager:
   tags:
   - circle
   - obstacle
+  - cube
+  - triangle
+  - circleY
+  - circleB
+  - circleP
+  - cubeY
+  - cubeB
+  - cubeP
+  - triangleY
+  - triangleB
+  - triangleP
   layers:
   - Default
   - TransparentFX
