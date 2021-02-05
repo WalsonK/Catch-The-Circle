@@ -1345,21 +1345,21 @@ MonoBehaviour:
   sounds:
   - name: Theme
     clip: {fileID: 8300000, guid: 47f45ef7b5767674393cc401fc325705, type: 3}
-    volume: 0.03
+    volume: 0.14
     pitch: 1
     loop: 1
     source: {fileID: 0}
     output: {fileID: 24300002, guid: 85167615eadfb764cb041792375d0d6a, type: 2}
   - name: PlayerDeath
     clip: {fileID: 8300000, guid: b5e9bdd3eb0f347408eb081db5a31112, type: 3}
-    volume: 1
+    volume: 0.5
     pitch: 1
     loop: 0
     source: {fileID: 0}
     output: {fileID: 24300002, guid: 85167615eadfb764cb041792375d0d6a, type: 2}
   - name: Dissolution
     clip: {fileID: 8300000, guid: 2c1a133b6de5e864c88802585207591b, type: 3}
-    volume: 1
+    volume: 0.5
     pitch: 1
     loop: 0
     source: {fileID: 0}
