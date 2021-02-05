@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.45139313, g: 0.50047255, b: 0.5701123, a: 1}
+  m_IndirectSpecularColor: {r: 0.45139265, g: 0.5004716, b: 0.57011163, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -587,7 +587,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 5.55e-43, y: 9.4e-44, z: 0, w: 8.0023765e-10}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -1358,7 +1358,14 @@ MonoBehaviour:
     source: {fileID: 0}
     output: {fileID: 24300002, guid: 85167615eadfb764cb041792375d0d6a, type: 2}
   - name: Dissolution
-    clip: {fileID: 8300000, guid: 6002820b650ab844dbe0f9c7584d378f, type: 3}
+    clip: {fileID: 8300000, guid: 2c1a133b6de5e864c88802585207591b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    output: {fileID: 24300002, guid: 85167615eadfb764cb041792375d0d6a, type: 2}
+  - name: Explosion
+    clip: {fileID: 8300000, guid: f65d3235d8c2af047a3a20b6e1240bac, type: 3}
     volume: 1
     pitch: 1
     loop: 0
@@ -1750,6 +1757,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   restartDelay: 0.5
   actualScore: 0
+  error: 0
   levelCompleteUI: {fileID: 738957242}
   levelObjectifUI: {fileID: 939247187}
   obj: 
