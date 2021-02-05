@@ -23,10 +23,12 @@ public class Registration : MonoBehaviour
         {
             StartCoroutine(Register());
         }
+        /*
         else
         {
             Login();
         }
+        */
     }
 
     IEnumerator Register()
@@ -55,6 +57,7 @@ public class Registration : MonoBehaviour
         submitButton.interactable = (firstnamefield.text.Length >= 3 && lastnamefield.text.Length >= 5 );
     }
 
+    /*
     IEnumerator Login()
     {
         WWWForm form = new WWWForm();
@@ -77,5 +80,5 @@ public class Registration : MonoBehaviour
         }
 
     }
-
+    */
 }
