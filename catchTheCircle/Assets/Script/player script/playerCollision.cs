@@ -30,14 +30,18 @@ public class playerCollision : MonoBehaviour
         else
         {
             GameObject touchedFalse = collisionInfo.collider.gameObject;
-            //Joue l'animation d'explosion
-            touchedFalse.GetComponent<explosion>().explosionObj.GetComponent<VisualEffect>().Play();
-            //Augmente l'erreur +1
-            FindObjectOfType<GameManager>().error += 1f;
-            //Joue le son 
-            FindObjectOfType<AudioManager>().Play("Explosion");
-            //Fais disparaitre l'objet
-            disappearObject(touchedFalse);
+            if (touchedFalse.name != "Plane")
+            {
+                //Joue l'animation d'explosion
+                touchedFalse.GetComponent<explosion>().explosionObj.GetComponent<VisualEffect>().Play();
+                //Augmente l'erreur +1
+                FindObjectOfType<GameManager>().error += 1f;
+                //Joue le son 
+                FindObjectOfType<AudioManager>().Play("Explosion");
+                //Fais disparaitre l'objet
+                disappearObject(touchedFalse);
+            }
+            
         }
         /*if(collisionInfo.collider.tag == "obstacle")
         {
