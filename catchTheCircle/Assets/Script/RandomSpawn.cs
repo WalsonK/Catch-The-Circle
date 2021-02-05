@@ -98,7 +98,7 @@ public class RandomSpawn : MonoBehaviour
         newObject.GetComponent<Renderer>().material = shader;
 
         //diffuclt = true donc modifie les tags avec couleurs :
-        if (FindObjectOfType<GameManager>().difficult == true && FindObjectOfType<GameManager>().objCase >= 3)
+        if (FindObjectOfType<GameManager>().difficult == true)
         {
             //Sphere
             if (Shape.name == "Sphere" && shader.name == "purpleD")

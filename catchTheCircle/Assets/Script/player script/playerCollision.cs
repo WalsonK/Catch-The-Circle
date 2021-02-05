@@ -15,6 +15,10 @@ public class playerCollision : MonoBehaviour
         if (collisionInfo.collider.tag == objectifTag)
         {
             touched.GetComponent<Collider>().enabled = false;
+            if (FindObjectOfType<GameManager>().difficult == true)
+            {
+                FindObjectOfType<playerMovement>().Boost();
+            }
             Debug.Log("We hit the objectif !");
             // Augmenter le score de 1 !
             FindObjectOfType<GameManager>().actualScore += 1f;

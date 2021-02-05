@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.45139265, g: 0.5004716, b: 0.57011163, a: 1}
+  m_IndirectSpecularColor: {r: 0.45139313, g: 0.50047255, b: 0.5701123, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -212,7 +212,7 @@ GameObject:
   m_Layer: 0
   m_Name: SpawnPoints (1)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -224,7 +224,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 392900289}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.04, y: 0, z: 0}
+  m_LocalPosition: {x: 5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1679581234}
@@ -242,7 +242,7 @@ GameObject:
   m_Layer: 0
   m_Name: SpawnPoints
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -272,7 +272,7 @@ GameObject:
   m_Layer: 0
   m_Name: SpawnPoints (2)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -284,7 +284,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 486864308}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.85, y: 0, z: 0}
+  m_LocalPosition: {x: -5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1679581234}
@@ -1934,7 +1934,7 @@ GameObject:
   m_Layer: 0
   m_Name: RandomSpawner
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2577,13 +2577,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 621341465681764660, guid: 3bd194da1266ae3458a6be0fcb1cae8d,
         type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 621341465681764660, guid: 3bd194da1266ae3458a6be0fcb1cae8d,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 621341465681764660, guid: 3bd194da1266ae3458a6be0fcb1cae8d,
+        type: 3}
       propertyPath: m_Constraints
       value: 112
       objectReference: {fileID: 0}
     - target: {fileID: 621341465681764660, guid: 3bd194da1266ae3458a6be0fcb1cae8d,
         type: 3}
       propertyPath: m_IsKinematic
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 621341465681764660, guid: 3bd194da1266ae3458a6be0fcb1cae8d,
         type: 3}
@@ -2597,8 +2607,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 621341465681764662, guid: 3bd194da1266ae3458a6be0fcb1cae8d,
         type: 3}
+      propertyPath: axisForce
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 621341465681764662, guid: 3bd194da1266ae3458a6be0fcb1cae8d,
+        type: 3}
+      propertyPath: impulse.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 621341465681764662, guid: 3bd194da1266ae3458a6be0fcb1cae8d,
+        type: 3}
+      propertyPath: impulse.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 621341465681764662, guid: 3bd194da1266ae3458a6be0fcb1cae8d,
+        type: 3}
+      propertyPath: impulse.z
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 621341465681764662, guid: 3bd194da1266ae3458a6be0fcb1cae8d,
+        type: 3}
       propertyPath: forwardForce
-      value: 10
+      value: 1100
       objectReference: {fileID: 0}
     - target: {fileID: 621341465681764665, guid: 3bd194da1266ae3458a6be0fcb1cae8d,
         type: 3}
