@@ -1,4 +1,8 @@
 <?php
+
+
+	$con = mysqli_connect('localhost', 'sa', 'sa', 'ppe4');
+
 	if(isset($_POST["email"]) && isset($_POST["password1"]) && isset($_POST["password2"])){
 		$errors = array();
 		
@@ -40,15 +44,13 @@
 			}
 		}
 		
-		//Check if there is user already registered with the same email or username
+		//Check if there is user already registered with the same email
 		if(count($errors) == 0){
-			//Connect to database
-			require dirname(__FILE__) . '/database.php';
-			
+
 			if ($stmt = $mysqli_conection->prepare("SELECT mail_manager FROM manager WHERE mail_manager = ? LIMIT 1")) {
 				
 				/* bind parameters for markers */
-				$stmt->bind_param('ss', $email);
+				$stmt->bind_param('s', $email);
 					
 				/* execute query */
 				if($stmt->execute()){
@@ -86,7 +88,7 @@
 			if ($stmt = $mysqli_conection->prepare("INSERT INTO manager (mail_manager, password_manager) VALUES( ?, ?)")) {
 				
 				/* bind parameters for markers */
-				$stmt->bind_param('sss', $hashedPassword);
+				$stmt->bind_param('ss', $email, $hashedPassword);
 					
 				/* execute query */
 				if($stmt->execute()){

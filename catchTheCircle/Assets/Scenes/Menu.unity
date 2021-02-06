@@ -1601,6 +1601,7 @@ GameObject:
   - component: {fileID: 317439746}
   - component: {fileID: 317439745}
   - component: {fileID: 317439744}
+  - component: {fileID: 317439748}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1693,6 +1694,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &317439748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317439743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 247cd5c81412f4d4c96d8028c109f492, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dashboard: {fileID: 0}
+  mailfield: {fileID: 0}
+  passwordfield: {fileID: 0}
+  submitButton: {fileID: 0}
 --- !u!1 &328042100
 GameObject:
   m_ObjectHideFlags: 0
@@ -4827,7 +4844,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1477963317}
-        m_MethodName: CallRegister
+        m_MethodName: CallLogin
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8082,7 +8099,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1477963314
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8142,15 +8159,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1477963313}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8df73cd12a7ba2d4ba3caf0f0d360314, type: 3}
+  m_Script: {fileID: 11500000, guid: 247cd5c81412f4d4c96d8028c109f492, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playermenu: {fileID: 1477963313}
   dashboard: {fileID: 590701513}
   mailfield: {fileID: 1838512733}
   passwordfield: {fileID: 422382340}
-  firstnamefield: {fileID: 0}
-  lastnamefield: {fileID: 0}
   submitButton: {fileID: 870538397}
 --- !u!1 &1536572543
 GameObject:
@@ -10498,7 +10512,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1981012290
 RectTransform:
   m_ObjectHideFlags: 0
