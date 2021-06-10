@@ -31,7 +31,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.postprocessing": {
-      "version": "2.2.2",
+      "version": "3.0.1",
       "depth": 1,
       "source": "registry",
       "dependencies": {},
@@ -48,22 +48,22 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.render-pipelines.lightweight": {
-      "version": "7.3.1",
+      "version": "7.5.3",
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.unity.render-pipelines.universal": "7.3.1",
-        "com.unity.postprocessing": "2.1.7"
+        "com.unity.render-pipelines.universal": "7.5.3",
+        "com.unity.postprocessing": "3.0.1"
       },
       "url": "https://packages.unity.com"
     },
     "com.unity.render-pipelines.universal": {
-      "version": "7.3.1",
+      "version": "7.5.3",
       "depth": 1,
       "source": "registry",
       "dependencies": {
-        "com.unity.render-pipelines.core": "7.3.1",
-        "com.unity.shadergraph": "7.3.1"
+        "com.unity.render-pipelines.core": "7.5.3",
+        "com.unity.shadergraph": "7.5.3"
       },
       "url": "https://packages.unity.com"
     },

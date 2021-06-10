@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -2312,6 +2312,7 @@ MonoBehaviour:
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
+  m_ShouldActivateOnSelect: 1
 --- !u!114 &422382341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4016,6 +4017,7 @@ MonoBehaviour:
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
+  m_ShouldActivateOnSelect: 1
 --- !u!114 &736557899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5124,7 +5126,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1477963317}
+      - m_Target: {fileID: 0}
         m_MethodName: CallRegister
         m_Mode: 1
         m_Arguments:
@@ -5353,6 +5355,7 @@ MonoBehaviour:
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
+  m_ShouldActivateOnSelect: 1
 --- !u!114 &872589714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5730,7 +5733,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &991455659
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8481,6 +8484,7 @@ MonoBehaviour:
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
+  m_ShouldActivateOnSelect: 1
 --- !u!114 &1364079169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8612,7 +8616,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1432614877
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8792,14 +8796,13 @@ GameObject:
   - component: {fileID: 1477963314}
   - component: {fileID: 1477963315}
   - component: {fileID: 1477963316}
-  - component: {fileID: 1477963317}
   m_Layer: 5
   m_Name: AdminMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1477963314
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8850,7 +8853,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   submitBtn: {fileID: 870538397}
   firstInput: {fileID: 1838512733}
-
 --- !u!1 &1484447952
 GameObject:
   m_ObjectHideFlags: 0
@@ -8861,7 +8863,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1484447953}
   - component: {fileID: 1484447955}
-  - component: {fileID: 1484447954}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -8888,33 +8889,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -0.5}
   m_SizeDelta: {x: -20, y: -13}
   m_Pivot: {x: 0.5, y: 0.5}
-  m_GameObject: {fileID: 1484447952}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 0
-    m_AlignByGeometry: 0
-    m_RichText: 0
-    m_HorizontalOverflow: 1
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 
 --- !u!222 &1484447955
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10869,6 +10843,7 @@ MonoBehaviour:
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
+  m_ShouldActivateOnSelect: 1
 --- !u!114 &1838512734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11184,7 +11159,7 @@ MonoBehaviour:
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 1863555868}
-  m_TextComponent: {fileID: 1484447954}
+  m_TextComponent: {fileID: 0}
   m_Placeholder: {fileID: 1168912410}
   m_ContentType: 7
   m_InputType: 2
@@ -11207,6 +11182,7 @@ MonoBehaviour:
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
+  m_ShouldActivateOnSelect: 1
 --- !u!114 &1863555868
 MonoBehaviour:
   m_ObjectHideFlags: 0
